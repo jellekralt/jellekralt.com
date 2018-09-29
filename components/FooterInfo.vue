@@ -3,7 +3,7 @@
     <section class="footer-info-links">
       <h1 class="footer-info__title">Links</h1>
       <ul class="footer-info-links__list">
-        <li class="footer-info-links__list-item"><a class="footer-info-links__link" href="https://github.com/jellekralt">Github</a></li>
+        <li class="footer-info-links__list-item"><a class="footer-info-links__link" href="https://github.com/jellekralt">GitHub</a></li>
         <li class="footer-info-links__list-item"><a class="footer-info-links__link" href="https://twitter.com/jellekralt">Twitter</a></li>
         <li class="footer-info-links__list-item"><a class="footer-info-links__link" href="http://nl.linkedin.com/in/jellekralt">LinkedIn</a></li>
         <li class="footer-info-links__list-item"><a class="footer-info-links__link" href="https://keybase.io/jellekralt/">Keybase</a></li>
