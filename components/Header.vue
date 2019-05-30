@@ -17,7 +17,12 @@
 
 <script>
   export default {
-    props: ['navigation']
+    props: {
+      'navigation': {
+        type: Array,
+        required: true
+      }
+    }
   };
 </script>
 

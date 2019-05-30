@@ -1,32 +1,22 @@
 # jellekralt-com
 
-> JelleKralt.com
+> Personal Website of Jelle Kralt
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn run dev
 
 # build for production and launch server
-$ npm start
+$ yarn run build
+$ yarn start
+
+# generate static project
+$ yarn run generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-
-## TODO
-* [X] Convert / get rid of old sass stylesheets
-* [X] Fix Highlight.js on first load
-* [ ] Refactor markdown api to npm module
-* [X] Move blogpost to seperate component
-* [X] Add more favicons for all platforms
-* [ ] Add social media meta tags
-* [ ] Cache with serviceworkers
-* [X] Add sitemap.xml
-* [X] Refactor Entire SCSS structure to BEM
-
-## Design
-Based on the excellent [Cactus Dark](https://github.com/probberechts/cactus-dark) theme for Hexo
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

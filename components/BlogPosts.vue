@@ -1,43 +1,66 @@
 <template>
   <div>
-  <section class="post-latest">
-    <h1 class="post-latest__title">Latest Post: {{ posts[0].title }}</h1>
-    <p v-html="posts[0].content.match(/<(p)>(.*?)<\/\1>/)[2]"></p>
-    <span><nuxt-link class="post-latest__item-link" :to="{ path: posts[0].link }">Read more...</nuxt-link></span>
-  </section>
-  <section class="post-list">
-    <h1 class="post-list__title"><a href="/blog" class="post-list__title-link">More Blogposts</a></h1>
-    <ul class="post-list__items">
-      <li class="post-list__item" v-for="post in posts" v-bind:key="post.slug">
-        <div class="post-list__item-meta">
-          <time datetime="2017-01-01T00:01:00" itemprop="datePublished" v-html="$options.filters.dateSuperscript(post.dateFormatted)"></time>
-        </div>
-        <span><nuxt-link class="post-list__item-link" :to="{ path: post.link }">{{ post.meta.concept ? '[CONCEPT] ' : '' }}{{ post.title }}</nuxt-link></span>
-      </li>
-    </ul>
-    <span v-if="readMore" class="post-list__read-more">
-      <i class="post-list__read-more-icon fa fa-arrow-circle-right"></i> 
-      <nuxt-link to="/blog" class="post-list__read-more-link">Archive...</nuxt-link>
-    </span>
-  </section>
+    <section class="post-latest" v-if="posts.length > 0 ">
+      <h1 class="post-latest__title">Latest Post: {{ posts[0].title }}</h1>
+      <p v-html="posts[0].content.match(/<(p)>(.*?)<\/\1>/)[2]"></p>
+      <span>
+        <nuxt-link class="post-latest__item-link" :to="{ path: posts[0].link }">Read more...</nuxt-link>
+      </span>
+    </section>
+    <section class="post-list">
+      <h1 class="post-list__title">
+        <a href="/blog" class="post-list__title-link">More Blogposts</a>
+      </h1>
+      <ul class="post-list__items">
+        <li class="post-list__item" v-for="post in posts" v-bind:key="post.slug">
+          <div class="post-list__item-meta">
+            <time
+              datetime="2017-01-01T00:01:00"
+              itemprop="datePublished"
+              v-html="$options.filters.dateSuperscript(post.dateFormatted)"
+            ></time>
+          </div>
+          <span>
+            <nuxt-link
+              class="post-list__item-link"
+              :to="{ path: post.link }"
+            >{{ post.meta.concept ? '[CONCEPT] ' : '' }}{{ post.title }}</nuxt-link>
+          </span>
+        </li>
+      </ul>
+      <span v-if="readMore" class="post-list__read-more">
+        <i class="post-list__read-more-icon fa fa-arrow-circle-right"></i>
+        <nuxt-link to="/blog" class="post-list__read-more-link">Archive...</nuxt-link>
+      </span>
+    </section>
   </div>
 </template>
 
 <script>
-  export default {
-    props: ['posts', 'read-more'],
-    head () {
-      return {
-        title: 'Jelle Kralt'
-      };
+export default {
+  props: {
+    'posts': {
+      type: Array,
+      required: true
+    }, 
+    'read-more': {
+      type: Boolean,
+      required: false,
+      default: false
     }
-  };
+  },
+  head() {
+    return {
+      title: 'Jelle Kralt'
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 .post-latest {
   &__title {
-    // TODO: Remove important after .content fix 
+    // TODO: Remove important after .content fix
     letter-spacing: 0.01em !important;
     font-size: 1.5em !important;
     font-style: normal !important;
@@ -52,17 +75,15 @@
   &__item-link {
     color: $color-accent !important;
   }
-
 }
 
 .post-list {
-  
   &__items {
     padding: 0;
   }
 
   &__title {
-    // TODO: Remove important after .content fix 
+    // TODO: Remove important after .content fix
     letter-spacing: 0.01em !important;
     font-size: 1.5em !important;
     font-style: normal !important;
@@ -113,7 +134,7 @@
     &__item {
       display: flex;
       margin-bottom: 5px;
-      
+
       &-meta {
         min-width: 110px;
         text-align: left;

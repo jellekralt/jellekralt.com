@@ -1,14 +1,17 @@
-import { Router } from 'express';
-import NodeCache from 'node-cache';
-import * as Pinboard from 'node-pinboard';
+const express = require('express');
+
+const NodeCache = require('node-cache');
+const Pinboard = require('node-pinboard');
 
 const API_TOKEN = process.env.PINBOARD_API_TOKEN;
 const pinboard = new Pinboard(API_TOKEN);
 
-const router = Router();
 const cache = new NodeCache({});
 
-router.get('/links', (req, res, next) => {
+const app = express();
+module.exports = app;
+
+app.get('/api/links', async (req, res) => {
   const links = cache.get('links');
 
   if (links) {
@@ -42,4 +45,3 @@ router.get('/links', (req, res, next) => {
   });
 });
 
-export default router;

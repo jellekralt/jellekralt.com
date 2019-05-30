@@ -1,22 +1,27 @@
 <template>
   <div>
-  <section class="link-list">
-    <h1 class="link-list__title"><a href="/blog" class="link-list__title-link">Interesting Links</a></h1>
-    <ul class="link-list__items">
-      <li class="link-list__item" v-for="link in links" v-bind:key="link.href">
-        <div class="link-list__item-meta">
-          <time datetime="2017-01-01T00:01:00" itemprop="datePublished" v-html="$options.filters.dateSuperscript(link.dateFormatted)"></time>
-        </div>
-        <span><a class="link-list__item-link" :href="link.href" target="_blank" rel="noopener">{{ link.description }}</a></span>
-      </li>
-    </ul>
-  </section>
+    <section class="link-list">
+      <h1 class="link-list__title"><a href="/blog" class="link-list__title-link">Interesting Links</a></h1>
+      <ul class="link-list__items">
+        <li class="link-list__item" v-for="link in links" v-bind:key="link.href">
+          <div class="link-list__item-meta">
+            <time datetime="2017-01-01T00:01:00" itemprop="datePublished" v-html="$options.filters.dateSuperscript(link.dateFormatted)"></time>
+          </div>
+          <span><a class="link-list__item-link" :href="link.href" target="_blank" rel="noopener">{{ link.description }}</a></span>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 
 <script>
   export default {
-    props: ['links'],
+    props: {
+      'links': {
+        type: Array,
+        required: true
+      }
+    },
     head () {
       return {
         title: 'Jelle Kralt'

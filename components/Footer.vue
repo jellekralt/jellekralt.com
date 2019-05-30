@@ -1,5 +1,7 @@
 <template>
-  <footer class="footer" role="contentinfo">
+  <footer 
+    class="footer" 
+    role="contentinfo">
     <div class="footer__block-left">
       Copyright &copy; {{ year }} Jelle Kralt
     </div>
@@ -15,7 +17,12 @@
 
 <script>
 export default {
-  props: ['navigation'],
+  props: {
+    'navigation': {
+      type: Array,
+      required: true
+    }
+  },
   data: () => ({
     year: new Date().getUTCFullYear()
   })

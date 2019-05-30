@@ -1,6 +1,21 @@
 {
   "version": 2,
   "builds": [
-    { "src": "package.json", "use": "@now/static-build" }
-  ]
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/now-builder",
+      "config": {
+        
+      }
+    },
+    { "src": "api/*.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
+    { "src": "/api/([a-zA-Z]+)(.*)", "dest": "/api/$1.js" },
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "env": {
+    "MY_VARIABLE": "@pinboard-api-key"
+  }
 }

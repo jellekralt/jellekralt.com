@@ -4,7 +4,6 @@
 
 <script>
 import { isValid, parse, format } from 'date-fns';
-import axios from '~/plugins/axios';
 import BlogPost from '~/components/BlogPost.vue';
 
 export default {
@@ -16,15 +15,18 @@ export default {
 
     return isValid(date);
   },
-  async asyncData ({ params, error }) {
+  async asyncData ({ params, error, $axios }) {
     try {
-      let { data } = await axios.get(`/api/blog/${params.year}/${params.month}/${params.day}/${params.title}`);
+      let data = await $axios.$get(`/api/blog/${params.year}/${params.month}/${params.day}/${params.title}`);
 
       data.dateFormatted = format(parse(data.date), 'MMM Do YYYY');
 
       if (data.meta && data.meta.tags && typeof data.meta.tags === 'string') {
         data.meta.tags = data.meta.tags.split(',').map(tag => tag.trim());
       }
+
+      console.log('data', data);
+      
 
       return {
         post: data

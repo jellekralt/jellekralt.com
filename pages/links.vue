@@ -1,12 +1,11 @@
 <template>
   <div>
-  <link-dump v-bind:links="links"/>
+    <link-dump v-bind:links="links"/>
   </div>
 </template>
 
 <script>
 import { parse, format } from 'date-fns';
-import axios from '~/plugins/axios';
 import About from '~/components/About.vue';
 import LinkDump from '~/components/LinkDump.vue';
 
@@ -18,7 +17,7 @@ export default {
   data () {
     return { links: [] };
   },
-  async asyncData ({ app, params, error }) {
+  async asyncData ({ app, params, error, $axios }) {
     let url = '/api/links';
 
     if (params.tag) {
@@ -26,7 +25,7 @@ export default {
     }
 
     try {
-      let { data } = await axios.get(url);
+      let data = await $axios.$get(url);
 
       return {
         links: data.map(link => {

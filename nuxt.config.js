@@ -1,23 +1,8 @@
-const { resolve } = require('path');
-const sassResourcesLoader = {
-  loader: 'sass-resources-loader',
-  options: {
-    resources: [
-      resolve(__dirname, 'assets/scss/_variables.scss'),
-      resolve(__dirname, 'assets/scss/_mixins.scss')
-    ]
-  }
-};
-
-function isVueRule (rule) {
-  return rule.test.toString() === '/\\.vue$/';
-}
-
-function isSASSRule (rule) {
-  return ['/\\.sass$/', '/\\.scss$/'].indexOf(rule.test.toString()) !== -1;
-}
+const pkg = require('./package');
 
 module.exports = {
+  mode: 'universal',
+
   /*
   ** Headers of the page
   */
@@ -46,52 +31,70 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  /*
+  ** Customize the progress-bar color
+  */
+  loading: { color: '#fff' },
+
   /*
   ** Global CSS
   */
   css: ['~/assets/scss/main.scss'],
+
   /*
-  ** Modules
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+    '~plugins/filters.js'
+  ],
+
+  /*
+  ** Nuxt.js modules
   */
   modules: [
     '@nuxtjs/font-awesome',
     '@nuxtjs/sitemap',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    scss: ['@/assets/scss/_variables.scss', '@/assets/scss/_mixins.scss']
+  },
+
+  baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+
   /*
-  ** Plugins
+  ** Axios module configuration
   */
-  plugins: [
-    '~plugins/filters.js',
-    { src: '~plugins/ga.js', ssr: false }
-  ],
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    proxy:  true
+  },
+
+  proxy: {
+    '/api': (process.env.NODE_ENV !== 'production' ? 'http://localhost:1337' : 'https://jellekralt-com.jellekralt.now.sh/'),
+  },
+
   /*
-  ** Add axios globally
+  ** Build configuration
   */
   build: {
-    vendor: ['axios'],
     /*
-    ** Run ESLINT on save
+    ** You can extend webpack config here
     */
-    extend (config, ctx) {
-      // if (ctx.isClient) {
-      //   config.module.rules.push({
-      //     enforce: 'pre',
-      //     test: /\.(js|vue)$/,
-      //     loader: 'eslint-loader',
-      //     exclude: /(node_modules)/
-      //   });
-      // }
-
-      config.module.rules.forEach((rule) => {
-        if (isVueRule(rule)) {
-          rule.options.loaders.sass.push(sassResourcesLoader);
-          rule.options.loaders.scss.push(sassResourcesLoader);
-        }
-        if (isSASSRule(rule)) {
-          rule.use.push(sassResourcesLoader);
-        }
-      });
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
     }
   }
-};
+}

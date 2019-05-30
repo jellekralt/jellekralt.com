@@ -1,12 +1,11 @@
 <template>
   <div>
-  <blog-posts v-bind:posts="posts"/>
+    <blog-posts v-bind:posts="posts"/>
   </div>
 </template>
 
 <script>
 import { parse, format } from 'date-fns';
-import axios from '~/plugins/axios';
 import About from '~/components/About.vue';
 import BlogPosts from '~/components/BlogPosts.vue';
 
@@ -18,15 +17,15 @@ export default {
   data () {
     return { posts: [] };
   },
-  async asyncData ({ app, params, error }) {
-    let url = '/api/blog/';
+  async asyncData ({ app, params, error, $axios }) {
+    let url = '/api/blog';
 
     if (params.tag) {
       url += `?tag=${params.tag}`;
     }
 
     try {
-      let { data } = await axios.get(url);
+      let data = await $axios.$get(url);
 
       return {
         posts: data.map(post => {
