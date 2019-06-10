@@ -1,5 +1,7 @@
 const pkg = require('./package');
 
+const disqusDomains = 'https://disqus.com https://*.disqus.com https://*.disquscdn.com';
+
 module.exports = {
   mode: 'universal',
 
@@ -54,6 +56,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-helmet',
     '@nuxtjs/font-awesome',
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
@@ -61,12 +64,52 @@ module.exports = {
     '@nuxtjs/robots'
   ],
 
+  /*
+  ** Set style resources
+  */
   styleResources: {
     scss: ['@/assets/scss/_variables.scss', '@/assets/scss/_mixins.scss']
   },
 
+  /*
+  ** Base URL configuration
+  */
   baseUrl: process.env.BASE_URL || 'http://localhost:3000',
 
+  /*
+  ** Helmet configuration
+  */
+  helmet: {
+    hidePoweredBy: true,
+    dnsPrefetchControl: true,
+    expectCt: true,
+    frameguard: true,
+    hsts: true,
+    ieNoOpen: true,
+    noCache: true,
+    noSniff: true,
+    permittedCrossDomainPolicies: true,
+    referrerPolicy: true,
+    xssFilter: true
+  },
+
+  render: {
+    csp: {
+      hashAlgorithm: 'sha256',
+      policies: {
+        'default-src': ["'self'"],
+        'style-src': ["'self'", "'unsafe-inline'", disqusDomains],
+        'script-src': ["'self'", "'unsafe-inline'", disqusDomains, 'https://www.google-analytics.com'],
+        'img-src': ["'self'", 'data:', disqusDomains, 'https://www.google-analytics.com'],
+        'frame-src': ["'self'", disqusDomains]
+      }
+    }
+  },
+
+  
+  /*
+  ** Robots.txt settings
+  */
   robots: {
     UserAgent: '*',
     Disallow: (req) => {
@@ -89,6 +132,9 @@ module.exports = {
     proxy:  true
   },
 
+  /*
+  ** Proxy configuration
+  */
   proxy: {
     '/api': (process.env.NODE_ENV !== 'production' ? 'http://localhost:1337' : 'https://jellekralt-com.jellekralt.now.sh/'),
   },
