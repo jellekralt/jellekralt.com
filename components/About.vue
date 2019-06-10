@@ -1,7 +1,8 @@
 <template>
   <section class="about content">
+    <h1 class="about__title">Hi there, and welcome to my blog!</h1>
     <p>
-      Hi there, and welcome to my blog! I'm Jelle Kralt, a Front End Engineer at <a href="http://www.codezilla.nl" target="_blank" rel="noopener">CODEZILLA</a>, 
+      I'm Jelle Kralt, a Front End Engineer at <a href="http://www.codezilla.nl" target="_blank" rel="noopener">CODEZILLA</a>, 
       currently working for <a href="https://www.klm.nl">KLM</a>. I ❤️ everything to do with JavaScript, both in the browser and on Node.js.
     </p>
     <p class="about__social">
@@ -20,6 +21,19 @@
   p {
     text-align: left;
     hyphens: none;
+  }
+
+  &__title {
+     // TODO: Remove important after .content fix
+    letter-spacing: 0.01em !important;
+    font-size: 1.1em !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    color: $color-text !important;
+    margin-top: 3rem !important;
+    margin-bottom: 0rem !important;
+    display: block !important;
+    @include antialias();
   }
 
   &__social-icon {

@@ -40,7 +40,7 @@ export default {
   },
   head () {
     return {
-      title: 'Jelle Kralt'
+      title: 'Linkdump · Jelle Kralt'
     };
   }
 };

@@ -1,16 +1,16 @@
 <template>
   <div>
     <section class="post-latest" v-if="posts.length > 0 ">
-      <h1 class="post-latest__title">Latest Post: {{ posts[0].title }}</h1>
+      <h2 class="post-latest__title">Latest Post: {{ posts[0].title }}</h2>
       <p v-html="posts[0].content.match(/<(p)>(.*?)<\/\1>/)[2]"></p>
       <span>
         <nuxt-link class="post-latest__item-link" :to="{ path: posts[0].link }">Read more...</nuxt-link>
       </span>
     </section>
     <section class="post-list">
-      <h1 class="post-list__title">
+      <h2 class="post-list__title">
         <a href="/blog" class="post-list__title-link">More Blogposts</a>
-      </h1>
+      </h2>
       <ul class="post-list__items">
         <li class="post-list__item" v-for="post in posts" v-bind:key="post.slug">
           <div class="post-list__item-meta">
@@ -48,11 +48,6 @@ export default {
       required: false,
       default: false
     }
-  },
-  head() {
-    return {
-      title: 'Jelle Kralt'
-    };
   }
 };
 </script>

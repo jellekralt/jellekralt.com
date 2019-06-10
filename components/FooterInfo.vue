@@ -1,7 +1,7 @@
 <template>
   <div class="footer-info">
     <section class="footer-info-links">
-      <h1 class="footer-info__title">Links</h1>
+      <h2 class="footer-info__title">Links</h2>
       <ul class="footer-info-links__list">
         <li class="footer-info-links__list-item"><a class="footer-info-links__link" href="https://github.com/jellekralt">GitHub</a></li>
         <li class="footer-info-links__list-item"><a class="footer-info-links__link" href="https://twitter.com/jellekralt">Twitter</a></li>
@@ -10,7 +10,7 @@
       </ul>
     </section>
     <section class="footer-info-license">
-      <h1 class="footer-info__title">License</h1>
+      <h2 class="footer-info__title">License</h2>
       <p>All content by Jelle Kralt is under <a class="footer-info__link" href="https://creativecommons.org/licenses/by-nc-sa/2.0/nl/deed.en">creative commons</a> and code under <a class="footer-info__link" href="https://jellekralt.mit-license.org/">MIT license</a>.</p>
       <p>All code and content for this blog is available as open source on <a class="footer-info__link" href="https://github.com/jellekralt/jellekralt.com/">GitHub</a>.</p>
     </section>

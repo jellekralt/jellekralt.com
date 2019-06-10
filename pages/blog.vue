@@ -41,7 +41,7 @@ export default {
   },
   head () {
     return {
-      title: 'Jelle Kralt'
+      title: 'Blog Posts · Jelle Kralt'
     };
   }
 };

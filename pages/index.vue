@@ -33,7 +33,7 @@ export default {
   },
   head () {
     return {
-      title: 'Jelle Kralt'
+      title: 'Jelle Kralt · Personal Blog'
     };
   }
 };
