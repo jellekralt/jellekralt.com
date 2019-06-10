@@ -22,7 +22,10 @@ app.get('/sitemap.xml', async (req, res) => {
     };
   });
 
+  sitemap.urlset.unshift({ _attr: { xmlns: 'http://www.sitemaps.org/schemas/sitemap/0.9' } })
+  const sitemapXML = xml(sitemap, { declaration: true });
+
   res.type('application/xml');
-  res.send(xml(sitemap));
+  res.send(sitemapXML);
 });
 
