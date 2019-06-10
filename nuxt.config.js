@@ -69,7 +69,16 @@ module.exports = {
 
   robots: {
     UserAgent: '*',
-    Disallow: ''
+    Disallow: (req) => {
+      const isMainHost = req.headers.host === 'jellekralt.com';
+      return isMainHost ? '' : '/';
+    },
+    Sitemap: (req) => {
+      var proto = req.connection.encrypted ? 'https' : 'http';
+      proto = req.headers['x-forwarded-proto'] || proto;
+      
+      return `${proto}://${req.headers.host}/sitemap.xml`;
+    }
   },
 
   /*
