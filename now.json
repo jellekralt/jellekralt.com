@@ -1,21 +1,22 @@
 {
   "version": 2,
+  "alias": "jellekralt.com",
   "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/now-builder",
-      "config": {
-        
-      }
+      "config": {}
     },
-    { "src": "api/*.js", "use": "@now/node" }
+    { "src": "api/*.js", "use": "@now/node" },
+    { "src": "sitemap/*.js", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
     { "src": "/api/([a-zA-Z]+)(.*)", "dest": "/api/$1.js" },
+    { "src": "/sitemap.xml", "dest": "/sitemap/sitemap.js" },
     { "src": "/(.*)", "dest": "/" }
   ],
   "env": {
-    "MY_VARIABLE": "@pinboard-api-key"
+    "PINBOARD_API_TOKEN": "@pinboard-api-key"
   }
 }

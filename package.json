@@ -5,7 +5,7 @@
   "author": "Jelle Kralt",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nodemon devserver & nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/pwa": "^3.0.0-beta.16",
-    "@nuxtjs/sitemap": "^1.2.0",
+    "@nuxtjs/robots": "^2.2.0",
     "@nuxtjs/style-resources": "^0.1.2",
     "cross-env": "^5.2.0",
     "date-fns": "^1.30.1",
@@ -27,7 +27,8 @@
     "node-cache": "^4.2.0",
     "node-pinboard": "^1.0.0",
     "nuxt": "^2.4.0",
-    "slugify": "^1.3.4"
+    "slugify": "^1.3.4",
+    "xml": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

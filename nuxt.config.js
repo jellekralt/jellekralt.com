@@ -46,7 +46,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~plugins/filters.js'
+    '~plugins/filters.js',
+    '~plugins/ga.js'
   ],
 
   /*
@@ -54,10 +55,10 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/font-awesome',
-    '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/robots'
   ],
 
   styleResources: {
@@ -65,6 +66,11 @@ module.exports = {
   },
 
   baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+
+  robots: {
+    UserAgent: '*',
+    Disallow: ''
+  },
 
   /*
   ** Axios module configuration

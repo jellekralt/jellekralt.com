@@ -25,9 +25,6 @@ export default {
         data.meta.tags = data.meta.tags.split(',').map(tag => tag.trim());
       }
 
-      console.log('data', data);
-      
-
       return {
         post: data
       };

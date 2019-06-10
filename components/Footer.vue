@@ -20,7 +20,8 @@ export default {
   props: {
     'navigation': {
       type: Array,
-      required: true
+      required: false,
+      default: () => []
     }
   },
   data: () => ({

@@ -25,6 +25,11 @@ export default {
     PageFooter,
     PageHeader
   },
-  props: ['error']
+  props: {
+    'error': {
+      type: Object,
+      required: true
+    }
+  }
 };
 </script>
