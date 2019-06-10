@@ -12,7 +12,7 @@ module.exports = app;
 app.get('/sitemap.xml', async (req, res) => {
   const sitemap = { urlset: [] };
   const host = req.header('host');
-  const isEncrypted = req.header('req.connection.encrypted');
+  const isEncrypted = req.protocol;
 
   sitemap.urlset = routes.map((url) => { 
     return {
