@@ -30,7 +30,7 @@
     font-style: normal !important;
     font-weight: 700 !important;
     color: $color-text !important;
-    margin-top: 3rem !important;
+    margin-top: 0rem !important;
     margin-bottom: 0rem !important;
     display: block !important;
     @include antialias();

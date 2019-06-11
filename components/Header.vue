@@ -34,7 +34,7 @@
   margin: 0 auto 50px auto;
 
   @media screen and (max-width: $breakpoint-small) {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
   }
 
   &__link {
@@ -83,10 +83,11 @@
     line-height: 15px;
 
     @media screen and (max-width: $breakpoint-small) {
-      padding-top: 30px;
+      padding-top: 25px;
       
       li {
         font-size: 15px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -121,7 +122,8 @@
     }
 
     @media screen and (max-width: $breakpoint-small) {
-      padding: 2px 5px;
+      padding: 10px 6px;
+      display: inline-block;
       margin: 0;
       background-color: white;
       color: black;
