@@ -2,7 +2,7 @@
   <section class="about content">
     <h1 class="about__title">Hi there, and welcome to my blog!</h1>
     <p>
-      I'm Jelle Kralt, a Front End Engineer at <a href="http://www.codezilla.nl" target="_blank" rel="noopener">CODEZILLA</a>, 
+      I'm Jelle Kralt, a Front End Architect at <a href="http://www.codezilla.nl" target="_blank" rel="noopener">CODEZILLA</a>, 
       currently working for <a href="https://www.klm.nl">KLM</a>. I ❤️ everything to do with JavaScript, both in the browser and on Node.js.
     </p>
     <p class="about__social">

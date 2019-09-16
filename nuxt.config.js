@@ -16,7 +16,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=5' },
-      { hid: 'description', name: 'description', content: `Jelle Kralt's personal blog. Hi, I'm Jelle Kralt, a Front End Engineer at CODEZILLA, currently working for KLM. I ❤️ everything to do with JavaScript, both in the browser and on Node.js.` },
+      { hid: 'description', name: 'description', content: `Jelle Kralt's personal blog. Hi, I'm Jelle Kralt, a Front End Architect at CODEZILLA, currently working for KLM. I ❤️ everything to do with JavaScript, both in the browser and on Node.js.` },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@jellekralt' },
       { name: 'twitter:title', content: 'Jelle Kralt' },
