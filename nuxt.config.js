@@ -16,11 +16,11 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=5' },
-      { hid: 'description', name: 'description', content: `Jelle Kralt's personal blog. Hi, I'm Jelle Kralt, a Front End Architect at CODEZILLA, currently working for Rabobank. I ❤️ everything to do with JavaScript, both in the browser and on Node.js.` },
+      { hid: 'description', name: 'description', content: `Jelle Kralt's personal blog. Hi there, welcome to my personal little spot on the web. I do fun stuff with (emerging) technology at KLM Royal Dutch Airlines.` },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@jellekralt' },
       { name: 'twitter:title', content: 'Jelle Kralt' },
-      { name: 'twitter:description', content: `Jelle Kralt's personal blog. Hi, I'm Jelle Kralt, a Front End Architect at CODEZILLA, currently working for Rabobank. I ❤️ everything to do with JavaScript, both in the browser and on Node.js.` },
+      { name: 'twitter:description', content: `Jelle Kralt's personal blog. Hi there, welcome to my personal little spot on the web. I do fun stuff with (emerging) technology at KLM Royal Dutch Airlines.` },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'theme-color', content: '#ffffff' }
     ],
