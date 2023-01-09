@@ -2,8 +2,7 @@
   <section class="about content">
     <h1 class="about__title">Hi there, and welcome to my blog!</h1>
     <p>
-      I'm Jelle Kralt, a Front End Architect at <a href="http://www.codezilla.nl" target="_blank" rel="noopener">CODEZILLA</a>, 
-      currently working for <a href="https://www.klm.nl">KLM</a>. I ❤️ everything to do with JavaScript, both in the browser and on Node.js.
+      Hi there, welcome to my personal little spot on the web. My name is Jelle Kralt and I do fun stuff with (emerging) technology at KLM Royal Dutch Airlines.
     </p>
     <p class="about__social">
       <span>Find me on </span>
