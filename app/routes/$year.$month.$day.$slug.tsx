@@ -49,7 +49,7 @@ export const meta: MetaFunction<typeof loader> = ({
     (match) => match.meta ?? []
   );
   return [
-    { title: data.data.title + ' - JelleKralt.com' },
+    { title: data.data.title + ' - Jelle Kralt' },
     { name: "description", content: generateMetaDescription((data?.htmlContent)) },
 
   ];
