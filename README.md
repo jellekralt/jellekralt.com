@@ -1,7 +1,4 @@
-# Welcome to Remix!
-
-- 📖 [Remix docs](https://remix.run/docs)
-
+# JelleKralt.com
 ## Development
 
 Run the dev server:
