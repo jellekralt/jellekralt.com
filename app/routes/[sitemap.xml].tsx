@@ -1,4 +1,5 @@
 import { getAllPosts } from '~/utils/blogposts.server';
+import { navigationItems } from "~/config/navigation";
 
 const BASE_URL = 'https://jellekralt.com'
 
@@ -21,12 +22,7 @@ export const loader = async () => {
   try {
     const blogPosts = getAllPosts();
 
-    // Static URLs
-    const staticUrls = [
-      `${BASE_URL}/`, // Home
-      `${BASE_URL}/blog`, // Blog index
-      // Add other static routes here
-    ];
+    const staticUrls = navigationItems.map(page => `${BASE_URL}${page.path}`)
 
     // Dynamic URLs for blog posts
     const postUrls = blogPosts.map(
@@ -36,8 +32,20 @@ export const loader = async () => {
       }
     );
 
+    // Extract unique tags from all blog posts
+    const tags = new Set<string>();
+    blogPosts.forEach(post => {
+      post.tags.split(',').forEach(tag => {
+        tags.add(tag.trim().toLowerCase());
+      });
+    });
+
+    // Generate URLs for each tag
+    const tagUrls = Array.from(tags).map(tag => `${BASE_URL}/blog/tags/${encodeURIComponent(tag)}`);
+    
+
     // Combine all URLs
-    const urls = [...staticUrls, ...postUrls];
+    const urls = [...staticUrls, ...tagUrls, ...postUrls];
 
     const sitemap = toXmlSitemap(urls);
 

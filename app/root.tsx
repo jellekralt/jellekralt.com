@@ -7,7 +7,7 @@ import {
 } from "@remix-run/react";
 import "./tailwind.css";
 import './terminal.css';
-import ModeToggle from "./components/ModeToggle";
+import Navigation from "./components/Navigation";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const currentYear = new Date().getFullYear();
@@ -25,23 +25,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <header className="terminal-logo">
               <div className="logo terminal-prompt"><a href="/" className="no-style">JelleKralt.com</a></div>
             </header>
-            <nav className="terminal-menu">
-              <ul>
-                {/* <li><a href="/" className="menu-item"><span>Light</span></a></li> */}
-                <li><ModeToggle /></li>
-              </ul>
-            </nav>
+            <Navigation themeToggle={true} />
           </div>
         </div>
         <div className="container">
           {children}
         </div>
         <footer className="container">
-          <div className="mt-6 flex flex-col md:flex-row justify-between items-center">
+          <div className="mt-6 flex flex-col md:flex-row justify-between items-center place-items-center">
             <p className="text-sm">Copyright © {currentYear} Jelle Kralt</p>
-            <nav className="mt-4 md:mt-0 space-x-4">
-              <a href="/">home</a>
-            </nav>
+            <div className="mt-4 md:mt-0 space-x-4">
+              <Navigation themeToggle={false} />
+            </div>
           </div>
         </footer>
         <ScrollRestoration />
