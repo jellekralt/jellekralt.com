@@ -1,48 +1,72 @@
 import type { MetaFunction } from "@remix-run/node";
+import { json, LoaderFunction } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
+import BlogPostList from '~/components/BlogPosts';
+import { getAllPosts, PostMetaData } from '~/utils/blogposts.server';
+// import { GithubIcon, TwitterIcon, LinkedinBoxIcon, KeyIcon } from '@remixicons/react/fill'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "JelleKralt.com - Personal Homepage & Blog" },
+    { name: "description", content: "Jelle Kralt is a Technical Director and Innovator with expertise in web development, cloud computing, and cutting-edge technology. Explore insights, projects, and a blog focused on tech, innovation, and software engineering." },
   ];
 };
 
+export const loader: LoaderFunction = async () => {
+  const allPosts = getAllPosts();
+  const latestPosts = allPosts.slice(0, 5); // Get the latest 5 posts
+  return json({ latestPosts });
+};
+
 export default function Index() {
+  const { latestPosts } = useLoaderData<{ latestPosts: PostMetaData[] }>();
   return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/quickstart"
-            rel="noreferrer"
-          >
-            5m Quick Start
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/tutorial"
-            rel="noreferrer"
-          >
-            30m Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div>
+      <section>
+        <h1>Hi there, and welcome to my personal spot on the web!</h1> 
+        <p>
+          I'm Jelle Kralt, I work at <a href="http://www.klm.nl" target="_blank" rel="noreferrer">KLM Royal Dutch Airlines</a> as a Director of Technical Innovation.
+          I'm crazy about technology and innovation, and with a background in software engineering, I still ❤️ everything to do with JavaScript, both in the browser and on Node.js.
+        </p> 
+        <p>
+          {/* <span>Find me on </span> <span><a className="inline-block" target="_blank" rel="noreferrer" href="https://github.com/jellekralt" title="Github"><i><GithubIcon className="h-7 w-7 inline-block"/><span className="hidden">Github</span></i></a>, </span>
+          <span><a className="inline-block" target="_blank" rel="noreferrer" href="https://twitter.com/jellekralt" title="Twitter"><i><TwitterIcon className="h-7 w-7 inline-block"/><span className="hidden">Twitter</span></i></a>, </span>
+          <span><a className="inline-block" target="_blank" rel="noreferrer" href="http://nl.linkedin.com/in/jellekralt" title="LinkedIn"><i><LinkedinBoxIcon className="h-7 w-7 inline-block"/><span className="hidden">LinkedIn</span></i></a>, </span>
+          <span>and </span>
+          <span><a className="inline-block" target="_blank" rel="noreferrer" href="https://keybase.io/jellekralt/" title="Keybase"><i><KeyIcon className="h-7 w-7 inline-block"/><span className="hidden">Keybase</span></i></a></span> */}
+        </p>
+      </section>
+
+      <section>
+        <h2>Blogposts</h2> 
+        <p>Even though my last blogpost has been written quite a while ago, I'm keeping them here for archival purposes.</p>
+      
+        <BlogPostList posts={latestPosts} limit={5} />
+      </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section>
+          <h2>Links</h2>
+          <nav>
+            <ul>
+              <li><a href="https://github.com/jellekralt" rel="noreferrer">GitHub</a></li>
+              <li><a href="https://twitter.com/jellekralt" rel="noreferrer">Twitter</a></li>
+              <li><a href="http://nl.linkedin.com/in/jellekralt" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="https://keybase.io/jellekralt/" rel="noreferrer">Keybase</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <section>
+          <h2>License</h2>
+          <p>
+            All content by Jelle Kralt is under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/nl/deed.en" rel="noreferrer">creative commons</a> and code under <a href="https://jellekralt.mit-license.org/" rel="noreferrer">MIT license</a>.
+          </p>
+          <p>
+            All code and content for this blog is available as open source on <a href="https://github.com/jellekralt/jellekralt.com/" rel="noreferrer">GitHub</a>.
+          </p>
+        </section>
+      </div>
     </div>
   );
 }

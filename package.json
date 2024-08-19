@@ -11,15 +11,21 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/node": "^2.11.1",
-    "@remix-run/react": "^2.11.1",
-    "@remix-run/serve": "^2.11.1",
+    "@remix-run/node": "^2.11.2",
+    "@remix-run/react": "^2.11.2",
+    "@remix-run/serve": "^2.11.2",
+    "@remixicons/react": "^1.0.0",
+    "@vercel/remix": "^2.11.2",
+    "gray-matter": "^4.0.3",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "terminal.css": "^0.7.5"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.11.1",
+    "@remix-run/dev": "^2.11.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
