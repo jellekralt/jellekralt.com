@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/jellekralt
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jellekralt.com
+  * I am jellekralt (https://keybase.io/jellekralt) on keybase.
+  * I have a public key with fingerprint 3F3E 16CC 7579 D482 89C9  8A86 27EE B74F 1A08 4967
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01018c45282a178bdc6ddd6324bebaa17b5aee3841c7e413e80158b2b60f7a9c31760a",
+      "fingerprint": "3f3e16cc7579d48289c98a8627eeb74f1a084967",
+      "host": "keybase.io",
+      "key_id": "27eeb74f1a084967",
+      "kid": "01018c45282a178bdc6ddd6324bebaa17b5aee3841c7e413e80158b2b60f7a9c31760a",
+      "uid": "1e5f5d8c458c8cd29f10cf22b47bfb00",
+      "username": "jellekralt"
+    },
+    "merkle_root": {
+      "ctime": 1507017350,
+      "hash_meta": "0686097423f1801c7eacd8b5a11a03c340ff656a700fba5cedbe47f17c36ac4d",
+      "seqno": 1487683
+    },
+    "revoke": {
+      "sig_ids": [
+        "a0b9e8d1740048f0d97358e4d2a304db5f439d532bf5ad1af8576204d4dddba40f"
+      ]
+    },
+    "service": {
+      "hostname": "jellekralt.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1507017414,
+  "expire_in": 157680000,
+  "prev": "641e960f45c74bf6dcf41fd5821fc6597dfbfebf1770f0915fe64ea3362d293f",
+  "seqno": 33,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.74
+Comment: https://keybase.io/crypto
+
+yMK+AnicrZNbaB1FGMdP0jbRQKWQWqUK6pZAkLSd2ZnZmT2RxobGKhixF2ljo6dz
+Pdmcyx53N6dNY4qK8ULSYLHSFm2bB0FfWmupgkVsiLUi3qANUtAHFZtAMAXRo3kQ
+6mxQRPTRfVl25v/9v9/3n50Ly5dkmuoutvy07Iux956q+3Rq30Cm53LnxSFHhGrQ
+yQ45Bb340kWl4yRXCJSTdQAEkElMXOZySJlQ0lNKecjFQgtulwThWiOGoaQaQ6QZ
+gIQJV3jAUO5LBKkHuNPmmKCc11ElCsqJtUUGaehJSQn1FWYu86XPOPNcqrWg2EAO
+GPY9agv7wjitsHCCx3pdENo1+5FbxPsP/f/MPbBoBzUxRKWGTDKpXN9AII3rCkyF
+EQCkwlhHZV7SVt2vi0VdiHgxcYbbnJKOCkWdi8IwSeOVSZCKIAEUQIoIsCPyuC9X
+0glPwT3mAZ9iFxlomSwdl4pZWmhnRBJhYIxHPE4BMIITqZXQmBpIJfK4xMqSxPqJ
+cmg7YEY9hixBpKthQafN4yBvg4ud7C6HA+FrpiDFAGBmgPItDNNYuRwBrAQxGPmK
+IFcYwhXkhhHquXYH2yAFtxzOY8Nps6gayEXz9KT+lcA6GZYsUyUKk1CGRbvXlySV
+OJsmkwxWUvEeLXJ/2uREUFb2T7EVVR3FQVi2c1jlP0PDELc5em8liHQuSBWWjAH7
+pH101Vp6GGrfHiUmkmJhPCUNhkYR5kIjPeJTZYTRwsZGgQE+JEZ7WHOEPNceLjJ/
+p4iQ5eR562mzK/NkINLO8NRk79JMXVOmYVl9eoUyTTeu+OtiZZc0Xt/+7vXxW2/q
+frFx5PHGkwt7pk68cGgLrU+OHr752bs3nr/Kr3a82TNd6/y5u320tqL/dGMzea1n
+/baR+2/77PyWU5PPoZ0bP159gTz/6vvzB+aPzc/19ny1fveh8fwP2bfyV34Zen3z
+r0+eGnw7vmHnvg9fHjk4M/fg5GR/xzcf3TJ+5N5Lu757umvioQ++Lu1t/bF27cA7
+jzaPra0t/Pbt7pkzrfuLMxMts9cODw2s2r+yRhaOf//JXdumNz2wee6VTWc7kt+X
+rxndcOaNg7NN8NKObGtXX3BuQ/XzVai997621rH6umdaRh+5Z3rCP9d85bR/R28W
+bj1RWN15+aXbGxq2n1355Wx3+53zS9ccfbjL+QOqbYI3
+=DwjN
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jellekralt
+
+==================================================================
