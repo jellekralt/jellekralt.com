@@ -5,10 +5,13 @@ import BlogPostList from '~/components/BlogPosts';
 import { getAllPosts, PostMetaData } from '~/utils/blogposts.server';
 // import { GithubIcon, TwitterIcon, LinkedinBoxIcon, KeyIcon } from '@remixicons/react/fill'
 
+const BASE_URL = 'https://jellekralt.com'
+
 export const meta: MetaFunction = () => {
   return [
     { title: "Jelle Kralt - Personal Homepage & Blog" },
     { name: "description", content: "Jelle Kralt is a Technical Director and Innovator with expertise in web development, cloud computing, and cutting-edge technology. Explore insights, projects, and a blog focused on tech, innovation, and software engineering." },
+    { name: "canonical", content: `${BASE_URL}/` },
   ];
 };
 

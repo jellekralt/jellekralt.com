@@ -1,7 +1,17 @@
 // routes/index.jsx
-import { json, useLoaderData } from "@remix-run/react";
+import { json, MetaFunction, useLoaderData } from "@remix-run/react";
 import { getAllPosts } from '~/utils/blogposts.server';
 import BlogPostList from "~/components/BlogPosts";
+
+const BASE_URL = 'https://jellekralt.com'
+
+export const meta: MetaFunction = ({params}) => {
+  return [
+    { title: `Blogposts tagged with  #${params.tag} - Jelle Kralt` },
+    { name: "description", content: `All blogposts tagged with #${params.tag}` },
+    { name: "canonical", content: `${BASE_URL}/blog/tags/${params.tag}` },
+  ];
+};
 
 export async function loader({ params }) {
   const { tag } = params;

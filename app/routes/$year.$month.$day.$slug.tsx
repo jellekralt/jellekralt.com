@@ -6,6 +6,8 @@ import html from 'remark-html';
 import { Link, useLoaderData } from '@remix-run/react';
 import type { MetaFunction } from "@remix-run/node";
 
+const BASE_URL = 'https://jellekralt.com'
+
 function generateMetaDescription(content) {
   if (content) {
     const text = content.replace(/<[^>]+>/g, ''); // Strip out any HTML tags
@@ -43,14 +45,17 @@ function getDaySuffix(day) {
 
 export const meta: MetaFunction<typeof loader> = ({
   data,
-  matches
+  matches,
+  params
 }) => {
+  const { year, month, day, slug } = params;
   const parentMeta = matches.flatMap(
     (match) => match.meta ?? []
   );
   return [
     { title: data.data.title + ' - Jelle Kralt' },
     { name: "description", content: generateMetaDescription((data?.htmlContent)) },
+    { name: "canonical", content: `${BASE_URL}/${year}/${month}/${day}/${slug}` }
 
   ];
 };
