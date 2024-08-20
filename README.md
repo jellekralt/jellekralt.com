@@ -1,37 +1,45 @@
 # JelleKralt.com
-## Development
 
-Run the dev server:
+This repository contains the source code for [JelleKralt.com](https://jellekralt.com), a personal blog website built using modern web technologies.
 
-```shellscript
+## Table of Contents
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Development](#development)
+  - [Deployment](#deployment)
+- [Styling](#styling)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+- **Remix Framework**: A full-stack web framework for building fast and dynamic applications.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **TypeScript**: Strongly typed programming language for safer and more reliable code.
+
+## Getting Started
+
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (v16+)
+- npm (v7+)
+
+### Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/jellekralt/jellekralt.com.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd jellekralt.com
+    ```
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+### Development
+Start the development server:
+```bash
 npm run dev
-```
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
