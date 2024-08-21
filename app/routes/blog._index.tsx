@@ -23,7 +23,7 @@ export default function Index() {
 
   return (
     <div>
-      <h1 className="">Latest Blog Posts</h1>
+      <h1 className="">All Blog Posts</h1>
       <p>Even though my last blogpost has been written quite a while ago, I'm keeping them here for archival purposes.</p>
       <BlogPostList posts={posts} />
     </div>
