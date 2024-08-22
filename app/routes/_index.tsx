@@ -29,7 +29,7 @@ export default function Index() {
         <h1>Hi there, and welcome to my personal spot on the web!</h1> 
         <p>
           I'm Jelle Kralt, I work at <a href="http://www.klm.nl" target="_blank" rel="noreferrer">KLM Royal Dutch Airlines</a> as a Director of Technical Innovation.
-          I'm crazy about technology and innovation, and with a background in software engineering, I still ❤️ everything to do with JavaScript, both in the browser and on Node.js.
+          I'm crazy about technology and innovation, and with a background in software engineering, I still ❤️ everything to do with JavaScript, both in the browser and on the server.
         </p> 
         <p>
           {/* <span>Find me on </span> <span><a className="inline-block" target="_blank" rel="noreferrer" href="https://github.com/jellekralt" title="Github"><i><GithubIcon className="h-7 w-7 inline-block"/><span className="hidden">Github</span></i></a>, </span>
