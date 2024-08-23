@@ -33,7 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </div>
         <footer className="container">
           <div className="mt-6 flex flex-col md:flex-row justify-between items-center place-items-center">
-            <p className="text-sm">Copyright © {currentYear} Jelle Kralt</p>
+            <p className="text-sm align-middle m-0">Copyright © {currentYear} Jelle Kralt</p>
             <div className="mt-4 md:mt-0 space-x-4">
               <Navigation themeToggle={false} />
             </div>
