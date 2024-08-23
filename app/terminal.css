@@ -9,7 +9,7 @@ h2, h3, h4, h5, h6 {
   margin: calc(var(--global-line-height) * 1.5) 0 var(--global-line-height);
 }
 
-ul {
+ul, pre {
   margin: 0 0 var(--global-line-height);
 }
 

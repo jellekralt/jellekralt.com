@@ -5,19 +5,11 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { Link, useLoaderData } from '@remix-run/react';
 import type { MetaFunction } from "@remix-run/node";
+import hljs from "highlight.js";
 import { formatDate } from '~/utils/datetime';
+import { useEffect } from 'react';
 
 const BASE_URL = 'https://jellekralt.com'
-
-function generateMetaDescription(content) {
-  if (content) {
-    const text = content.replace(/<[^>]+>/g, ''); // Strip out any HTML tags
-    return text.slice(0, 160).trim() + '...'; // Trim to 160 characters and add ellipsis
-  } else {
-    return '';
-  }
-}
-
 
 export const meta: MetaFunction<typeof loader> = ({
   data,
@@ -25,9 +17,7 @@ export const meta: MetaFunction<typeof loader> = ({
   params
 }) => {
   const { year, month, day, slug } = params;
-  const parentMeta = matches.flatMap(
-    (match) => match.meta ?? []
-  );
+
   return [
     { title: data.data.title + ' - Jelle Kralt' },
     { name: "description", content: generateMetaDescription((data?.htmlContent)) },
@@ -61,6 +51,15 @@ export default function BlogPost() {
   const { htmlContent, data, date } = useLoaderData();
   let tags = data.tags.split(',');
 
+  useEffect(() => {
+    document.querySelectorAll("pre code").forEach((block) => {
+      if (!block.hasAttribute('data-highlighted')) {
+        hljs.highlightElement(block as HTMLElement);
+        block.setAttribute('data-highlighted', 'yes');
+      }
+    });
+  }, []);
+
   return (
     <article>
       <h1>{data.title}</h1>
@@ -77,4 +76,13 @@ export default function BlogPost() {
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
     </article>
   );
+}
+
+function generateMetaDescription(content) {
+  if (content) {
+    const text = content.replace(/<[^>]+>/g, ''); // Strip out any HTML tags
+    return text.slice(0, 160).trim() + '...'; // Trim to 160 characters and add ellipsis
+  } else {
+    return '';
+  }
 }

@@ -17,6 +17,7 @@
     "@remixicons/react": "^1.0.0",
     "@vercel/remix": "^2.11.2",
     "gray-matter": "^4.0.3",
+    "highlight.js": "^11.10.0",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
