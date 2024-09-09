@@ -21,7 +21,7 @@ export const meta: MetaFunction<typeof loader> = ({
   return [
     { title: data.data.title + ' - Jelle Kralt' },
     { name: "description", content: generateMetaDescription((data?.htmlContent)) },
-    { name: "canonical", content: `${BASE_URL}/${year}/${month}/${day}/${slug}` }
+    { tagName: "link", rel: "canonical", href: `${BASE_URL}/${year}/${month}/${day}/${slug}` }
 
   ];
 };

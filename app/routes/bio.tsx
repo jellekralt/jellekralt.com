@@ -7,7 +7,7 @@ export const meta: MetaFunction = () => {
   return [
     { title: "Biography Jelle Kralt" },
     { name: "description", content: "Learn about Jelle Kralt, a seasoned Technical Director and Innovator with extensive experience in web development, cloud computing, and software engineering." },
-    { name: "canonical", content: `${BASE_URL}/bio` },
+    { tagName: "link", rel: "canonical", href: `${BASE_URL}/bio` },
   ];
 };
 

@@ -9,7 +9,7 @@ export const meta: MetaFunction = ({params}) => {
   return [
     { title: `Blogposts tagged with  #${params.tag} - Jelle Kralt` },
     { name: "description", content: `All blogposts tagged with #${params.tag}` },
-    { name: "canonical", content: `${BASE_URL}/blog/tags/${params.tag}` },
+    { tagName: "link", rel: "canonical", href: `${BASE_URL}/blog/tags/${params.tag}` },
   ];
 };
 
