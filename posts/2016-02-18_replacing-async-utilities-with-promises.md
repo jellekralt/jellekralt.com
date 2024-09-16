@@ -77,7 +77,7 @@ async.series([
 Thats better, right? But now I have a dependency on async, something which is fine in most cases, but not when you want to write a simple dependency-less script for (for instance) BitBar.
 
 ## (Native) promises
-Another way of solving this would be to create some promises and running them with ```Promise.all();```. As long as you do this with a promise library like Q or Bluebird, you'd still have the dependency issue though. Luckily, native promises have landed in all major browsers, except IE, and in Node.js (which we are using for the BitBar plugin) since v0.12. There are still some issues with native promises (like its [slowness](http://programmers.stackexchange.com/questions/278778/why-are-native-es6-promises-slower-and-more-memory-intensive-than-bluebird), and [memory leaks](plus/promises-spec/issues/179)), but for this particular purpose, it should be sufficient. 
+Another way of solving this would be to create some promises and running them with ```Promise.all();```. As long as you do this with a promise library like Q or Bluebird, you'd still have the dependency issue though. Luckily, native promises have landed in all major browsers, except IE, and in Node.js (which we are using for the BitBar plugin) since v0.12. There are still some issues with native promises (like its [slowness](http://programmers.stackexchange.com/questions/278778/why-are-native-es6-promises-slower-and-more-memory-intensive-than-bluebird), and [memory leaks](https://github.com/promises-aplus/promises-spec/issues/179)), but for this particular purpose, it should be sufficient. 
 
 ```javascript
 console.log('foo');
