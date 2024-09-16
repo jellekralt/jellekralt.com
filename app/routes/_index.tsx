@@ -12,6 +12,7 @@ export const meta: MetaFunction = () => {
     { title: "Jelle Kralt - Personal Homepage & Blog" },
     { name: "description", content: "Jelle Kralt is a Technical Director and Innovator with expertise in web development, cloud computing, and cutting-edge technology. Explore insights, projects, and a blog focused on tech, innovation, and software engineering." },
     { tagName: "link", rel: "canonical", href: `${BASE_URL}/` },
+    { tagName: "link", rel: "alternate", type: "application/rss+xml", title: "RSS Feed", href: "/rss" },
   ];
 };
 
