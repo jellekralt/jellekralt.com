@@ -139,7 +139,7 @@ You get the idea—each transaction needs to be meticulously formatted.
 ## Results and Final Thoughts
 After some trial and error (okay, a lot of it), the script now converts ABN AMRO’s chaotic Excel exports into beautifully structured OFX files, ready to be imported into MoneyWell. It’s not perfect—new formats still pop up occasionally—but it’s been a huge timesaver for me.
 
-If you’re looking to automate your financial workflows, this little script might just be the missing link. Got a similar use case or need help setting up your own solution? Drop a comment below or reach out!
+If you’re looking to automate your financial workflows, this little script might just be the missing link. [You can find the complete script on Github](https://github.com/jellekralt/abnamro-to-ofx)
 
 Happy coding! 😊
 
