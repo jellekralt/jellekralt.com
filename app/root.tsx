@@ -9,6 +9,8 @@ import "./tailwind.css";
 import './terminal.css';
 import Navigation from "./components/Navigation";
 
+const beamToken = '0b707bbe-0f09-4669-965f-883582fa10ea';
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const currentYear = new Date().getFullYear();
   return (
@@ -18,6 +20,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        {process.env.NODE_ENV === "development" || !beamToken ? null : (
+          <>
+            <script
+              src="https://beamanalytics.b-cdn.net/beam.min.js"
+              data-token={ beamToken }
+              async
+            >
+            </script>
+          </>
+        )}
       </head>
       <body className="terminal">
         <div className="container">
