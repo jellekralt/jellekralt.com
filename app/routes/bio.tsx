@@ -17,19 +17,16 @@ export default function Bio() {
       <h1>Jelle Kralt</h1>
       <img className="float-left w-1/4 mr-6 mb-4 object-cover" src="/jellekralt.png" alt="Portret of Jelle Kralt, smiling, posing for a gray background looking at the camera" />
       <p>
-        Jelle Kralt is a seasoned Technical Director and Innovator with a passion for pushing the boundaries of technology. With extensive experience in web development, cloud computing, and software engineering, Jelle has a proven track record of leading technical teams to success.
+        Jelle Kralt is a Managing Director and Partner at Lemonshark Amsterdam, a cyber security firm dedicated to safeguarding businesses in an increasingly digital world. With a strong background in technology and innovation, Jelle brings over a decade of experience in technical leadership and software engineering to his role.
       </p>
       <p>
-        Jelle&apos;s career spans over a decade, during which he has honed his skills in various programming languages, frameworks, and cloud platforms. He has a deep understanding of modern web technologies and is always on the lookout for the next big innovation in the tech industry.
+        Jelle has a proven track record of building and leading high-performing teams, driving innovation, and delivering scalable solutions across various domains, including web development, cloud computing, and cyber security. His deep expertise in modern technologies and his ability to navigate complex challenges make him a trusted advisor to clients and a respected leader in the industry.
       </p>
       <p>
-        Currently, Jelle serves as the Director of Technical Innovation at KLM, where he spearheads cutting-edge projects that drive the future of aviation technology. His work focuses on creating scalable, reliable, and efficient solutions that meet the needs of a rapidly evolving industry.
+        Prior to joining Lemonshark Amsterdam, Jelle served as Director of Technical Innovation at KLM, where he led groundbreaking projects in aviation technology, focusing on creating reliable and efficient solutions for a rapidly evolving industry.
       </p>
       <p>
-        Beyond his professional work, Jelle is an avid contributor to the open-source community and enjoys sharing his knowledge through blogs, talks, and mentorship. His dedication to continuous learning and passion for technology make him a respected leader and innovator in the field.
-      </p>
-      <p>
-        In his free time, Jelle enjoys exploring new technologies, contributing to open-source projects, and staying ahead of the curve in the ever-changing landscape of software development.
+        Beyond his professional work, Jelle is a passionate advocate for continuous learning and knowledge sharing. He actively contributes to the tech community through blogs, talks, and mentorship. In his free time, he enjoys exploring emerging technologies, contributing to open-source projects, and staying ahead of industry trends.
       </p>
       <p>
         Connect with Jelle on <a href="https://github.com/jellekralt" className="text-blue-500 hover:underline">GitHub</a>, <a href="https://twitter.com/jellekralt" className="text-blue-500 hover:underline">Twitter</a>, or <a href="http://nl.linkedin.com/in/jellekralt" className="text-blue-500 hover:underline">LinkedIn</a>.
