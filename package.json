@@ -11,11 +11,11 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/node": "^2.11.2",
-    "@remix-run/react": "^2.11.2",
-    "@remix-run/serve": "^2.11.2",
+    "@remix-run/node": "^2.15.2",
+    "@remix-run/react": "^2.15.2",
+    "@remix-run/serve": "^2.15.2",
     "@remixicons/react": "^1.0.0",
-    "@vercel/remix": "^2.11.2",
+    "@vercel/remix": "^2.15.2",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.10.0",
     "isbot": "^4.1.0",
@@ -26,7 +26,7 @@
     "terminal.css": "^0.7.5"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.11.2",
+    "@remix-run/dev": "^2.15.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
