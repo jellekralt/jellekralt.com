@@ -3,7 +3,7 @@ import { json, LoaderFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import BlogPostList from '~/components/BlogPosts';
 import { getAllPosts, PostMetaData } from '~/utils/blogposts.server';
-// import { GithubIcon, TwitterIcon, LinkedinBoxIcon, KeyIcon } from '@remixicons/react/fill'
+// import { GithubIcon, LinkedinBoxIcon, KeyIcon } from '@remixicons/react/fill'
 
 const BASE_URL = 'https://jellekralt.com'
 
@@ -34,7 +34,6 @@ export default function Index() {
         </p> 
         <p>
           {/* <span>Find me on </span> <span><a className="inline-block" target="_blank" rel="noreferrer" href="https://github.com/jellekralt" title="Github"><i><GithubIcon className="h-7 w-7 inline-block"/><span className="hidden">Github</span></i></a>, </span>
-          <span><a className="inline-block" target="_blank" rel="noreferrer" href="https://twitter.com/jellekralt" title="Twitter"><i><TwitterIcon className="h-7 w-7 inline-block"/><span className="hidden">Twitter</span></i></a>, </span>
           <span><a className="inline-block" target="_blank" rel="noreferrer" href="http://nl.linkedin.com/in/jellekralt" title="LinkedIn"><i><LinkedinBoxIcon className="h-7 w-7 inline-block"/><span className="hidden">LinkedIn</span></i></a>, </span>
           <span>and </span>
           <span><a className="inline-block" target="_blank" rel="noreferrer" href="https://keybase.io/jellekralt/" title="Keybase"><i><KeyIcon className="h-7 w-7 inline-block"/><span className="hidden">Keybase</span></i></a></span> */}
@@ -54,7 +53,6 @@ export default function Index() {
           <nav>
             <ul>
               <li><a href="https://github.com/jellekralt" rel="noreferrer">GitHub</a></li>
-              <li><a href="https://twitter.com/jellekralt" rel="noreferrer">Twitter</a></li>
               <li><a href="http://nl.linkedin.com/in/jellekralt" rel="noreferrer">LinkedIn</a></li>
               <li><a href="https://keybase.io/jellekralt/" rel="noreferrer">Keybase</a></li>
             </ul>

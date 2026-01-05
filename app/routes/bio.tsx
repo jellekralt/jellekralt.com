@@ -29,7 +29,7 @@ export default function Bio() {
         Beyond his professional work, Jelle is a passionate advocate for continuous learning and knowledge sharing. He actively contributes to the tech community through blogs, talks, and mentorship. In his free time, he enjoys exploring emerging technologies, contributing to open-source projects, and staying ahead of industry trends.
       </p>
       <p>
-        Connect with Jelle on <a href="https://github.com/jellekralt" className="text-blue-500 hover:underline">GitHub</a>, <a href="https://twitter.com/jellekralt" className="text-blue-500 hover:underline">Twitter</a>, or <a href="http://nl.linkedin.com/in/jellekralt" className="text-blue-500 hover:underline">LinkedIn</a>.
+        Connect with Jelle on <a href="https://github.com/jellekralt" className="text-blue-500 hover:underline">GitHub</a> or <a href="http://nl.linkedin.com/in/jellekralt" className="text-blue-500 hover:underline">LinkedIn</a>.
       </p>
     </div>
   );
